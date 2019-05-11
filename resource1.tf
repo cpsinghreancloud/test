@@ -12,3 +12,7 @@ tags {
     Name = "webserver"
   }
 }
+#resource "aws_eip_association" "eip_assoc" {
+#  instance_id   = "${aws_instance.webserver.id}"
+# allocation_id = "${aws_eip_association.eip_assoc.id}"
+#}

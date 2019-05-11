@@ -1,7 +1,33 @@
 #!/bin/sh
 sudo apt-get update -y
 sudo apt-get install nginx -y
-echo "Yeah!!! This is Nginx Webserver. :)
-"ufw allow 'Nginx HTTP'
+sudo touch /var/www/html/index.html
+sudo echo "Yeah!!! This is Nginx Webserver. :)" > /var/www/html/index.html
+sudo ufw allow 'Nginx HTTP'
 sudo ufw allow 'Nginx HTTPS'
-systemctl restart nginx
+sudo systemctl restart nginx
+sudo touch /home/ubuntu/testkey.pem
+sudo echo "-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEArEHsYHUXK4/uLO5lkJttS/jtTzTnSbFwNG7PjyUYAOaRBduNVeaVxAul86og
+0sJ7R76b4hFT5FX1WdSu/vM0DIG25gUKk1EFDjNxJX1AngrWdOwBkTZ1lnJ1c5FInsBdALSakJUs
+sKhdzdvaQuzI1Sabycd8IJN+RTHlS8XZ8Ezbf1fjhI4agmCJitlGH0/072nLxNi5fAkiXUhIrGD7
+QnK3sdmdD78qsYFq4Bx8Wp76ihrkJZPIkdchScpOCenIcatremOBM6Z90T7JI2fCCWJOwTZ1nqnW
+P2FS1PsSjzV57VgNzcTvkinH6QcTiEtcr+K9XOJM8vbpBZkeUZ0bFQIDAQABAoIBAGonOgb7QWsc
+CJfx1e82iTVPUtcD8CBu04nMW+aH4nHzpJ1qfn/YWKT21K8DQbUAGr7MzP2U1hEZk9hnA+yjbYjj
+ixXXN3wvaqEkvG5w8Jg0b5KgOhsF55LuOEke2BTU0Lt1kObWtzKqnxwUhz3E88K/RzQi1fCxVBhK
+Nlbqt3KosykGi8gbUyD8L9WvzWr0LmhFv7Dl8xsFGm8RGE+N7lvGNf6uw+LCMHzKWLsQfUDZRph6
+OnwCXOEIN+FNBg+cuFWNmaX4v3mJkTxXSbMeZkG22hSECA//uqZk9KhlXQy5xKZic3G/88sHPHck
+ZagLKEFg7GSpyjxNkNJdaDZgkOUCgYEA/Q98Z+Gw+2JlREE1fqJ5vnVVVRi+6o2NeH+dneXSvIGh
+U+RSxtA/BDfZiLGgSvSODFNNGuIEjQpcJtLHbxz1TZ2wa0VhumLAU48zctc3GR2m5CPs7siUNUaC
+N+bO8GaaUyeohs6K6nj2207y2pS3TcO8WTjjsKr9NoD6UdemErMCgYEArkIoSjWcFdY5BE3rsNqR
+u9vT32osr1O/lfyaNaH/vVg+xx4rOG/m9+YWELyNa2H7DY3Vv2/8/MR7sFmOVp1f1Pf1jfsEq6pp
+D2OQ8yIBbZI0OF8q4cOsBbsdxnv8xj2u7PzmtOGg/PwsiB5rLxrPQNYLvq2x2yqiii99j7i7XxcC
+gYARrlpP28oE1mwi57d4IJwG/aW3q2Hze25uA+ScWqltuFTwSpyp/XTZs5lEXrzHX+zo2Y0imrYc
+sKOdps5+afSNtr3T0OYyIqIzdGbw2C6mV5cIi6YLTQJl8oY4p6y/yTtxIe05dgbouQjua8a2FPv1
+t/5Z8YqfFmNYwow62all1wKBgBUFghrBsNyphSNRyxcApwgEkuCmzFEyRzBu0qOZsWJEHP6kUw5x
+4WkSZqMKO/0ySrjt3VVEyz4q7cjuZM9qGL92UjcYiw2ydw4WMsxB0+5F7urGAERP+JaQZh0lo+6+
+TjXkpGg5t9QND8oz8TYzg8EMkUolZglMcWM+K2WFIYVtAoGAVAYUGy5VQwzYWYuHOK1L+JLep5ev
+e0DP8PNK9nrctnvKV5lB1xuJKe4wor5b0amf+Z1LIKbgmX2FFNy6jAr/YteYzxfu7ITD54ajXEaj
+55lxtGpBNOR6uFhYZDo33MC0qCev92diNUeibtGGfS1YVHsYLuQgjbV+FI2eliiAZgE=
+-----END RSA PRIVATE KEY-----" > /home/ubuntu/testkey.pem
+sudo chmod 400 /home/ubuntu/testkey.pem

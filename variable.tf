@@ -29,5 +29,5 @@ variable "key_name" {
 
 variable "Elastic_IP" {
      description = "elastic IP"
-     default = "54.167.199.91"
+     default = "54.205.224.202"
 }
